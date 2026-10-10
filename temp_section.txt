@@ -1,0 +1,16 @@
+﻿    <section class="cs-gallery section-container">
+      <div class="cs-bento-grid">
+        <div class="cs-bento-item cs-span-2-col" style="display: flex; flex-direction: column;">
+          <img src="assets/projects/photo-manipulation/Menzildjian_Finished.jpg" alt="Photo Manipulation" loading="lazy" style="margin-bottom: var(--space-md);">
+          
+          <button class="statement-toggle">
+            Project Information <span class="arrow">↓</span>
+          </button>
+          <div class="statement-content">
+            <div class="cs-info" style="padding-top: var(--space-md); color: var(--color-text-muted); font-size: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: var(--space-md);">
+              This fantasy first-person montage is about giving viewers a break from everyday weight and inviting them into a dreamlike world for a moment. I wanted it to feel magical, personal, and open-ended, with no extra characters, so each viewer can imagine their own story while moving through the scene.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
