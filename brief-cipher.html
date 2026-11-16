@@ -3,188 +3,255 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brief Cipher - Ryan Menzildjian</title>
+  <title>Brief Cipher — Ryan Menzildjian</title>
+  <meta name="description" content="Brief Cipher is a timed drawing game about design vocabulary, with an identity and boxed edition designed by Ryan Menzildjian.">
+  <meta name="author" content="Ryan Menzildjian">
+  <meta property="og:title" content="Brief Cipher — Ryan Menzildjian">
+  <meta property="og:description" content="A complete identity and product system for a fast-paced mystery drawing game.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
+  <link rel="stylesheet" href="brief-cipher.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-
-  <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Ryan Menzildjian is an Identity Designer & Brand Strategist based in New York. Explore a portfolio of modern brand identities, apparel design, and creative storytelling.">
-  <meta name="keywords" content="Ryan Menzildjian, Identity Designer, Brand Strategist, UI/UX Designer, Graphic Designer, New York, Branding Portfolio, Graphic Design">
-  <meta name="author" content="Ryan Menzildjian">
-  <meta property="og:title" content="Brief Cipher - Ryan Menzildjian">
-  <meta property="og:description" content="Identity Designer & Brand Strategist based in New York.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Brief Cipher - Ryan Menzildjian">
-  <meta name="twitter:description" content="Identity Designer & Brand Strategist based in New York.">
 </head>
-<body class="light-mode">
+<body class="light-mode brief-cipher-page">
+  <a class="bc-skip-link" href="#main-content">Skip to project</a>
+
   <header class="site-header">
     <div class="header-inner">
-      <nav class="social-nav">
-        <a href="https://www.linkedin.com/in/ryanmenzildjian/" target="_blank" aria-label="LinkedIn">
+      <nav class="social-nav" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/ryanmenzildjian/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
-        <a href="https://www.instagram.com/ryan.menzi/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/ryan.menzi/" target="_blank" rel="noreferrer" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
         <a href="mailto:ryanmenzildjian@gmail.com" aria-label="Email">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
         </a>
       </nav>
-      <a href="/" class="logo" aria-label="Ryan Menzildjian">
-        <img src="assets/signature.png" alt="Ryan Menzildjian" class="signature-img">
-      </a>
-      <nav class="main-nav">
-        <a href="index.html#work">work</a>
-        <a href="index.html#about">about</a>
-        <a href="assets/resume.pdf" target="_blank">resume</a>
-        <button id="invert-toggle" class="invert-btn" aria-label="Invert Colors">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20V4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z"/></svg>
-        </button>
+      <a href="index.html" class="logo" aria-label="Ryan Menzildjian home"><img src="assets/signature.png" alt="Ryan Menzildjian" class="signature-img"></a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html#work">work</a><a href="index.html#about">about</a><a href="assets/resume.pdf" target="_blank">resume</a>
+        <button id="invert-toggle" class="invert-btn" aria-label="Invert colors"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20V4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z"/></svg></button>
       </nav>
     </div>
   </header>
 
-  <main class="case-study-main">
-    <section class="cs-hero section-container">
-      <div class="cs-hero-grid">
-        <div class="cs-title-col">
-          <p class="cs-kicker">Project</p>
-          <h1 class="cs-title">Brief Cipher</h1>
-          <p class="cs-subtitle"></p>
+  <main id="main-content" class="bc-main">
+    <section class="bc-hero bc-shell" aria-labelledby="bc-title">
+      <div class="bc-hero__header">
+        <div>
+          <p class="bc-label">Project</p>
+          <h1 id="bc-title">Brief Cipher</h1>
         </div>
-        <div class="cs-meta-col">
-          <div class="cs-meta-grid">
-            <div class="cs-meta-item">
-              <span class="cs-meta-label">Client</span>
-              <span class="cs-meta-value">BA Studio Project</span>
+        <div class="bc-hero__details">
+          <dl class="bc-hero__facts">
+            <div><dt>Client</dt><dd>BA Studio Project</dd></div>
+            <div>
+              <dt>Services</dt>
+              <dd><ul role="list">
+                <li>Game System Design</li>
+                <li>Visual Identity</li>
+                <li>Print Collateral + Packaging</li>
+              </ul></dd>
             </div>
-            <div class="cs-meta-item">
-              <span class="cs-meta-label">Year</span>
-              <span class="cs-meta-value">2025</span>
-            </div>
-            <div class="cs-meta-item">
-              <span class="cs-meta-label">Services</span>
-              <span class="cs-meta-value"><ul>
-                                <li>Game System Design</li>
-                                <li>Visual Identity</li>
-                                <li>Print Collateral + Packaging</li>
-                            </ul></span>
-            </div>
-            <div class="cs-meta-item" style="align-self: start;">
-              <a href="assets/projects/brief-cipher/Brief_Cipher_Statement.jpg" target="_blank" class="external-link-btn" style="width: fit-content;">
-                Project Statement <span class="arrow">↗</span>
-              </a>
+          </dl>
+          <div class="bc-hero__facts">
+            <dl><div><dt>Year</dt><dd>2025</dd></div></dl>
+            <div class="bc-hero__statement">
+              <a class="external-link-btn" href="assets/projects/brief-cipher/Brief_Cipher_Statement.jpg" target="_blank" rel="noopener">Project Statement <span class="arrow" aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="cs-info">
-        Brief Cipher is a fast team game where a Lead Designer gets 60 seconds to sketch selected process cards from a shared 5x5 grid. Teammates guess the clue, score by difficulty, and learn design language through play. After critique, I shifted the system from concept cards to process-focused cards and refined typography, color, and layout for quick readability.
+      <div class="bc-overview" aria-labelledby="overview-title">
+        <h2 id="overview-title">How the Game Works</h2>
+        <p>Pick a card from the shared 5×5 grid. You have one minute to sketch a clue before your team guesses the design process.</p>
+        <p>Each prompt is something designers do, like sketching or wireframing. Harder cards earn more points.</p>
+      </div>
+      <div class="bc-media"><img src="assets/projects/brief-cipher/identity/detective-hero.webp" width="2600" height="1974" fetchpriority="high" alt="The Brief Cipher title and detective over a cream grid"></div>
+    </section>
+
+    <section class="bc-section bc-section--ink bc-section--identity" aria-labelledby="identity-title">
+      <div class="bc-shell">
+        <header class="bc-section-head">
+          <h2 id="identity-title">Visual Identity</h2>
+          <p class="bc-section-intro">The detective gives the box a face. The BC monogram and cursor take up less room on smaller pieces.</p>
+        </header>
+        <figure class="bc-figure bc-figure--feature bc-figure--primary">
+          <div class="bc-media"><img src="assets/projects/brief-cipher/identity/primary.webp" width="1800" height="1801" alt="Full-color Brief Cipher primary logo with detective character" loading="lazy"></div>
+          <figcaption class="bc-caption"><h3>Primary Logo</h3><p>I drew the detective mid-search to give players an early hint that the game is about finding clues.</p></figcaption>
+        </figure>
+        <div class="bc-mark-layout" aria-label="BC monogram variations">
+          <figure class="bc-mark-panel bc-mark-panel--lead">
+            <div class="bc-media bc-mark-panel__image bc-mark-panel__image--charcoal"><img src="assets/projects/brief-cipher/identity/monogram-accent.webp" width="1300" height="1281" alt="BC secondary monogram with detective hat and red scarf" loading="lazy"></div>
+            <figcaption class="bc-caption"><h3>BC Monogram</h3><p>The magnifying glass becomes the C. The hat and scarf tie the initials back to the full illustration.</p></figcaption>
+          </figure>
+          <figure class="bc-mark-panel">
+            <div class="bc-media bc-mark-panel__image bc-mark-panel__image--cream"><img src="assets/projects/brief-cipher/identity/monogram-positive.webp" width="1300" height="1255" alt="Charcoal BC monogram on cream" loading="lazy"></div>
+            <figcaption class="bc-caption"><h3>Positive Monogram</h3></figcaption>
+          </figure>
+          <figure class="bc-mark-panel">
+            <div class="bc-media bc-mark-panel__image bc-mark-panel__image--charcoal"><img src="assets/projects/brief-cipher/identity/monogram-reversed.webp" width="1300" height="1305" alt="Cream BC monogram on charcoal" loading="lazy"></div>
+            <figcaption class="bc-caption"><h3>Reversed Monogram</h3></figcaption>
+          </figure>
+        </div>
+        <div class="bc-support-grid">
+          <div class="bc-support-copy"><h3>Cursor &amp; Keyhole</h3><p>I cut a keyhole into the familiar shape of a design cursor. Repeated at different angles, it becomes the pattern around the box.</p></div>
+          <figure class="bc-mark-panel"><div class="bc-media bc-mark-panel__image bc-mark-panel__image--cream"><img src="assets/projects/brief-cipher/identity/symbol-positive.webp" width="1300" height="1319" alt="Positive cursor and keyhole supporting symbol" loading="lazy"></div><figcaption class="bc-caption"><h3>Positive Symbol</h3></figcaption></figure>
+          <figure class="bc-mark-panel"><div class="bc-media bc-mark-panel__image bc-mark-panel__image--charcoal"><img src="assets/projects/brief-cipher/identity/symbol-reversed.webp" width="1300" height="1345" alt="Reversed cursor and keyhole supporting symbol" loading="lazy"></div><figcaption class="bc-caption"><h3>Reversed Symbol</h3></figcaption></figure>
+        </div>
       </div>
     </section>
 
-    <section class="cs-gallery section-container">
-      <div class="cs-bento-grid">
-        <div class="cs-bento-item cs-span-2-col">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Game_page-0001.jpg" alt="Slide 1" loading="lazy">
+    <section class="bc-section" aria-labelledby="color-title">
+      <div class="bc-shell">
+        <header class="bc-section-head">
+          <h2 id="color-title">Color Palette</h2>
+          <p class="bc-section-intro">Cream and charcoal carry most of the identity. Bright card borders help players spot the difficulty level at a glance.</p>
+        </header>
+        <div class="bc-palette-group">
+          <div class="bc-palette-label"><h3>Brand Colors</h3></div>
+          <div class="bc-swatches bc-swatches--foundation">
+            <div class="bc-swatch bc-swatch--outlined" style="--swatch:#F6EEE3"><span>Warm ivory</span><strong>#F6EEE3</strong></div>
+            <div class="bc-swatch bc-swatch--light" style="--swatch:#231F20"><span>Charcoal</span><strong>#231F20</strong></div>
+          </div>
         </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Game_page-0002.jpg" alt="Slide 2" loading="lazy">
+        <div class="bc-palette-group">
+          <div class="bc-palette-label"><h3>Difficulty Levels</h3></div>
+          <div class="bc-swatches bc-swatches--difficulty">
+            <div class="bc-swatch" style="--swatch:#97FF27"><span>Easy / signal lime</span><strong>#97FF27</strong></div>
+            <div class="bc-swatch" style="--swatch:#FFDD33"><span>Medium / clue yellow</span><strong>#FFDD33</strong></div>
+            <div class="bc-swatch" style="--swatch:#FF3E38"><span>Hard / alert red</span><strong>#FF3E38</strong></div>
+          </div>
         </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Game_page-0003.jpg" alt="Slide 3" loading="lazy">
+        <div class="bc-palette-group">
+          <div class="bc-palette-label"><h3>Detective Illustration</h3><p>The blue lens stands out against the warm tones of the detective’s coat.</p></div>
+          <div class="bc-swatches bc-swatches--character">
+            <div class="bc-swatch bc-swatch--light" style="--swatch:#8B5E3C"><span>Leather brown</span><strong>#8B5E3C</strong></div>
+            <div class="bc-swatch" style="--swatch:#957351"><span>Field taupe</span><strong>#957351</strong></div>
+            <div class="bc-swatch" style="--swatch:#A97C50"><span>Detective tan</span><strong>#A97C50</strong></div>
+            <div class="bc-swatch" style="--swatch:#FFBBBB"><span>Blush</span><strong>#FFBBBB</strong></div>
+            <div class="bc-swatch" style="--swatch:#2A7FFF"><span>Lens blue</span><strong>#2A7FFF</strong></div>
+            <div class="bc-swatch bc-swatch--light" style="--swatch:#2E3192"><span>Cipher indigo</span><strong>#2E3192</strong></div>
+            <div class="bc-swatch" style="--swatch:#A7A9AC"><span>Cool gray</span><strong>#A7A9AC</strong></div>
+          </div>
         </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Game_page-0004.jpg" alt="Slide 4" loading="lazy">
-        </div>
-        <div class="cs-bento-item cs-span-2-col">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0001.jpg" alt="Slide 5" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0002.jpg" alt="Slide 6" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0003.jpg" alt="Slide 7" loading="lazy">
-        </div>
-        <div class="cs-bento-item cs-span-3-col">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0004.jpg" alt="Slide 8" loading="lazy">
-        </div>
-        <div class="cs-bento-item cs-span-2-col">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0005.jpg" alt="Slide 9" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0006.jpg" alt="Slide 10" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0007.jpg" alt="Slide 11" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0008.jpg" alt="Slide 12" loading="lazy">
-        </div>
-        <div class="cs-bento-item cs-span-2-col">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0009.jpg" alt="Slide 13" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Process_page-0010.jpg" alt="Slide 14" loading="lazy">
-        </div>
-        <div class="cs-bento-item cs-span-3-col">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Rules_page-0001.jpg" alt="Slide 15" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Rules_page-0002.jpg" alt="Slide 16" loading="lazy">
-        </div>
-        <div class="cs-bento-item cs-span-2-col">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Rules_page-0003.jpg" alt="Slide 17" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Rules_page-0004.jpg" alt="Slide 18" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Rules_page-0005.jpg" alt="Slide 19" loading="lazy">
-        </div>
-        <div class="cs-bento-item">
-          <img src="assets/projects/brief-cipher/310_P3_Menzildjian_Rules_page-0006.jpg" alt="Slide 20" loading="lazy">
-        </div>
+      </div>
+    </section>
 
+    <section class="bc-section bc-section--ink" aria-labelledby="product-title">
+      <div class="bc-shell">
+        <header class="bc-section-head">
+          <h2 id="product-title">Packaging &amp; Cards</h2>
+        </header>
+        <figure class="bc-figure bc-figure--wide">
+          <div class="bc-media"><img src="assets/projects/brief-cipher/identity/game-box-updated.webp" width="2800" height="1400" alt="Two Brief Cipher boxes showing the detective lid and illustrated side panels" loading="lazy"></div>
+          <figcaption class="bc-caption"><h3>Game Box</h3><p>The lid gives the detective and title room. The cursor pattern wraps around the sides so the box still has a recognizable edge when stacked.</p></figcaption>
+        </figure>
+        <div class="bc-box-panels" aria-label="Box artwork">
+          <figure class="bc-figure">
+            <div class="bc-media"><img src="assets/projects/brief-cipher/identity/hero.webp" width="2600" height="1448" alt="Flat box lid artwork with the detective and player information" loading="lazy"></div>
+            <figcaption class="bc-caption"><h3>Box Lid</h3><p>The age range and player count sit together in the lower corner, leaving the center clear for the detective.</p></figcaption>
+          </figure>
+          <div class="bc-box-sides">
+            <figure class="bc-variant">
+              <img src="assets/projects/brief-cipher/identity/direction-graphic.webp" width="2200" height="397" alt="Narrow box panel with cursor marks converging on a point" loading="lazy">
+              <figcaption>Narrow cursor panel</figcaption>
+            </figure>
+            <figure class="bc-variant">
+              <img src="assets/projects/brief-cipher/identity/box-cursor-wide.webp" width="2600" height="688" alt="Wide box panel with converging cursor marks and a visible grid" loading="lazy">
+              <figcaption>Wide cursor panel</figcaption>
+            </figure>
+            <figure class="bc-variant">
+              <img src="assets/projects/brief-cipher/identity/box-hands-panel.webp" width="2600" height="881" alt="Box panel with illustrated hands at both ends" loading="lazy">
+              <figcaption>Illustrated hands panel</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="bc-card-study">
+          <figure class="bc-card-specimen">
+            <div class="bc-media">
+              <img src="assets/projects/brief-cipher/identity/bf4-19.png" width="3428" height="1901" alt="Illustrator specimen showing Easy Textures, Medium Wireframe, and Hard Isometric Visualization card fronts, detective backs, and Elizeth type samples" loading="lazy">
+            </div>
+          </figure>
+          <figure class="bc-figure bc-card-touchpoint">
+            <img src="assets/projects/brief-cipher/identity/cards-floating.webp" width="1120" height="899" alt="Three overlapping Brief Cipher cards with green, yellow and red borders" loading="lazy">
+            <figcaption class="bc-caption"><h3>Card Layout</h3><p>The border and point badge make difficulty easy to spot during a round.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="bc-section" aria-labelledby="guide-title">
+      <div class="bc-shell">
+        <header class="bc-section-head">
+          <h2 id="guide-title">Game Guide</h2>
+          <p class="bc-section-intro">The rules unfold in the order players need them. Setup comes first, with scoring explained after the example round.</p>
+        </header>
+        <section class="bc-gameplay" aria-labelledby="gameplay-title">
+          <header class="bc-gameplay__head">
+            <h3 id="gameplay-title">Gameplay Loop</h3>
+            <p><strong>Setup</strong> Shuffle the deck and lay out a 5×5 grid. Split into teams and choose a Lead Designer.</p>
+          </header>
+          <ol class="bc-gameplay__steps" role="list">
+            <li>
+              <h4>Sketch</h4>
+              <p>The Lead Designer secretly picks a card and has 60 seconds to draw a clue.</p>
+              <span class="bc-gameplay__arrow" aria-hidden="true">→</span>
+            </li>
+            <li>
+              <h4>Guess</h4>
+              <p>The designer reveals the sketch. Teammates work together to identify the design process.</p>
+              <span class="bc-gameplay__arrow" aria-hidden="true">→</span>
+            </li>
+            <li>
+              <h4>Score</h4>
+              <p>A correct guess earns 1, 2 or 3 points based on difficulty. A miss earns no points.</p>
+            </li>
+          </ol>
+          <div class="bc-gameplay__outcomes">
+            <p><strong><span aria-hidden="true">↺ </span>Next Round</strong> Rotate the Lead Designer and repeat.</p>
+            <p><strong>Game Over</strong> The team with the most points wins.</p>
+          </div>
+        </section>
+        <figure class="bc-figure bc-figure--wide">
+          <div class="bc-media"><img src="assets/projects/brief-cipher/identity/game-guide-roll-fold.webp" width="2800" height="2100" alt="Brief Cipher roll-fold game guide in closed, partially open and fully open views" loading="lazy"></div>
+          <figcaption class="bc-caption bc-caption--with-link">
+            <div><h3>Foldout Pamphlet</h3><p>The guide fits inside the box. Big type marks each step, and diagrams show where the cards go on the table. The reversed detective closes out the pamphlet on the back.</p></div>
+            <a class="external-link-btn" href="assets/projects/brief-cipher/identity/game-guide-roll-fold.webp" target="_blank" rel="noopener">View larger <span class="arrow" aria-hidden="true">↗</span></a>
+          </figcaption>
+        </figure>
+        <div class="bc-guide-sequence" aria-label="Game guide page sequence">
+          <figure><a href="assets/projects/brief-cipher/identity/guide-cover.webp" target="_blank" rel="noopener" aria-label="Open the cover page at full size"><img src="assets/projects/brief-cipher/identity/guide-cover.webp" width="765" height="1502" alt="Brief Cipher game guide cover" loading="lazy"></a><figcaption>Cover / orientation</figcaption></figure>
+          <figure><a href="assets/projects/brief-cipher/identity/guide-how.webp" target="_blank" rel="noopener" aria-label="Open the setup page at full size"><img src="assets/projects/brief-cipher/identity/guide-how.webp" width="765" height="1502" alt="How to set up Brief Cipher" loading="lazy"></a><figcaption>How / setup</figcaption></figure>
+          <figure><a href="assets/projects/brief-cipher/identity/guide-to.webp" target="_blank" rel="noopener" aria-label="Open the round instructions at full size"><img src="assets/projects/brief-cipher/identity/guide-to.webp" width="765" height="1502" alt="How a Brief Cipher round works" loading="lazy"></a><figcaption>To / round flow</figcaption></figure>
+          <figure><a href="assets/projects/brief-cipher/identity/guide-play.webp" target="_blank" rel="noopener" aria-label="Open the scoring page at full size"><img src="assets/projects/brief-cipher/identity/guide-play.webp" width="765" height="1502" alt="How to score and win Brief Cipher" loading="lazy"></a><figcaption>Play / scoring</figcaption></figure>
+          <figure><a href="assets/projects/brief-cipher/identity/primary-reversed.webp" target="_blank" rel="noopener" aria-label="Open the back cover at full size"><img src="assets/projects/brief-cipher/identity/primary-reversed.webp" width="765" height="1502" alt="Pamphlet back cover with the detective silhouette reversed out of charcoal" loading="lazy"></a><figcaption>Back cover</figcaption></figure>
+          <figure><a href="assets/projects/brief-cipher/identity/cards-field.webp" target="_blank" rel="noopener" aria-label="Open the deck panel at full size"><img src="assets/projects/brief-cipher/identity/cards-field.webp" width="772" height="1500" alt="Pamphlet panel patterned with Brief Cipher cards" loading="lazy"></a><figcaption>The deck</figcaption></figure>
+        </div>
       </div>
     </section>
   </main>
 
-        <footer class="next-projects-footer">
+  <footer class="next-projects-footer">
     <div class="section-container">
       <h3 class="next-projects-title">Up Next...</h3>
       <div class="next-projects-scroll">
-        <a href="aeqo" class="next-project-card">
-          <img src="assets/aeqo-new-preview.png" alt="AEQO Branding" loading="lazy">
-          <div class="card-title">AEQO Branding</div>
-        </a>        <a href="poppi" class="next-project-card">
-          <img src="assets/poppi-mockup.png" alt="Poppi" loading="lazy">
-          <div class="card-title">Poppi</div>
-        </a>        <a href="internship" class="next-project-card">
-          <img src="assets/girl-gains-mockup.jpg" alt="Girl Gains" loading="lazy">
-          <div class="card-title">Girl Gains</div>
-        </a>        <a href="type-specimen" class="next-project-card">
-          <img src="assets/type-specimen-mockup.png" alt="Type Specimen" loading="lazy">
-          <div class="card-title">Type Specimen</div>
-        </a>        <a href="photo-manipulation" class="next-project-card">
-          <img src="assets/photo-manipulation-opt.jpg" alt="Photo Manipulation" loading="lazy">
-          <div class="card-title">Photo Manipulation</div>
-        </a>
+        <a href="aeqo" class="next-project-card"><img src="assets/aeqo-new-preview.png" alt="AEQO Branding" loading="lazy"><div class="card-title">AEQO Branding</div></a>
+        <a href="poppi" class="next-project-card"><img src="assets/poppi-mockup.png" alt="Poppi" loading="lazy"><div class="card-title">Poppi</div></a>
+        <a href="internship" class="next-project-card"><img src="assets/girl-gains-mockup.jpg" alt="Girl Gains" loading="lazy"><div class="card-title">Girl Gains</div></a>
+        <a href="type-specimen" class="next-project-card"><img src="assets/type-specimen-mockup.png" alt="Type Specimen" loading="lazy"><div class="card-title">Type Specimen</div></a>
+        <a href="photo-manipulation" class="next-project-card"><img src="assets/photo-manipulation-opt.jpg" alt="Photo Manipulation" loading="lazy"><div class="card-title">Photo Manipulation</div></a>
       </div>
-      <a href="/" class="back-link">&larr; Back to Portfolio</a>
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
     </div>
   </footer>
-
   <script src="script.js"></script>
+  <script src="brief-cipher.js" defer></script>
 </body>
 </html>
-
-
-
