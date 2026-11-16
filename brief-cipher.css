@@ -97,7 +97,37 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
   letter-spacing: -0.045em;
   font-weight: 600;
 }
+.brief-cipher-page .external-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--bc-ink);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--bc-ink);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.brief-cipher-page .external-link-btn:hover {
+  color: #e06c4c;
+  border-bottom-color: #e06c4c;
+}
 .brief-cipher-page .external-link-btn:focus-visible { outline-offset: 4px; }
+.brief-cipher-page .external-link-btn .arrow {
+  display: inline-block;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-variant-emoji: text;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.brief-cipher-page .external-link-btn:hover .arrow {
+  transform: translate(4px, -4px);
+}
 .bc-hero__details {
   display: grid;
   grid-column: span 2;
@@ -115,7 +145,7 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
   line-height: 1.45;
 }
 .bc-hero__facts ul { margin: 0; padding: 0; list-style: none; }
-.bc-hero__statement .external-link-btn { font-size: clamp(0.9rem, 1.4vw, 1.1rem); }
+/* Matches landing page 1.1rem button */
 
 .bc-section { padding-block: var(--bc-space); }
 .bc-section--identity { padding-block-start: clamp(1.75rem, 3.5vw, 3rem); }
@@ -205,10 +235,17 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
 .bc-caption--with-link {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 1.25rem;
 }
-.bc-caption--with-link .external-link-btn { font-size: 0.75rem; white-space: nowrap; }
+.bc-caption--with-link .external-link-btn { font-size: 1.1rem; white-space: nowrap; }
+@media (max-width: 640px) {
+  .bc-caption--with-link {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 0.75rem;
+  }
+}
 .bc-variant figcaption, .bc-guide-sequence figcaption {
   margin-top: var(--bc-caption-gap);
   color: var(--bc-muted);
@@ -326,6 +363,11 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
   left: calc(100% + var(--bc-loop-gap) / 2);
   transform: translate(-50%, -50%);
   color: #231f20;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-variant-emoji: text;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 .bc-gameplay__outcomes { padding-top: 1rem; border-top: 1px solid #231f2033; }
 
