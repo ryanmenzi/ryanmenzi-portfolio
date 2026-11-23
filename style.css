@@ -937,6 +937,14 @@
   object-fit: cover;
   border-radius: 8px;
 }
+.next-project-card:has(img[src*="aeqo"]) {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.next-project-card img[src*="aeqo"] {
+  transform: scale(1.15);
+  clip-path: inset(0 round 8px);
+}
 .next-project-card .card-title {
   font-family: var(--font-sans);
   font-weight: 500;

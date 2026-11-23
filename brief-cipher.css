@@ -13,7 +13,8 @@
   font-display: swap;
 }
 
-.brief-cipher-page {
+.brief-cipher-page,
+.other-projects-page {
   --bc-site-black: #000000;
   --bc-paper: light-dark(#f6eee3, var(--bc-site-black));
   --bc-ink: light-dark(#231f20, #f6eee3);
@@ -32,18 +33,23 @@
   color: var(--bc-ink);
 }
 
-.brief-cipher-page .site-header {
+.brief-cipher-page .site-header,
+.other-projects-page .site-header {
   background: var(--bc-paper);
   border-bottom: 1px solid var(--bc-line);
   backdrop-filter: blur(14px);
 }
 
-.brief-cipher-page .signature-img { filter: none; }
+.brief-cipher-page .signature-img,
+.other-projects-page .signature-img { filter: none; }
 @media (prefers-color-scheme: dark) {
-  html:not([style*="color-scheme: light"]) .brief-cipher-page .signature-img { filter: invert(1); }
+  html:not([style*="color-scheme: light"]) .brief-cipher-page .signature-img,
+  html:not([style*="color-scheme: light"]) .other-projects-page .signature-img { filter: invert(1); }
 }
-html[style*="color-scheme: dark"] .brief-cipher-page .signature-img { filter: invert(1); }
-html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: none; }
+html[style*="color-scheme: dark"] .brief-cipher-page .signature-img,
+html[style*="color-scheme: dark"] .other-projects-page .signature-img { filter: invert(1); }
+html[style*="color-scheme: light"] .brief-cipher-page .signature-img,
+html[style*="color-scheme: light"] .other-projects-page .signature-img { filter: none; }
 
 .bc-main h1, .bc-main h2, .bc-main h3, .bc-main p,
 .bc-main figure, .bc-main dl, .bc-main dd { margin: 0; }
@@ -60,12 +66,15 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
 }
 .bc-skip-link:focus { transform: translateY(0); }
 
-.bc-shell, .brief-cipher-page .next-projects-footer .section-container {
+.bc-shell,
+.brief-cipher-page .next-projects-footer .section-container,
+.other-projects-page .next-projects-footer .section-container {
   width: min(100%, 1400px);
   margin-inline: auto;
   padding-inline: var(--bc-gutter);
 }
-.brief-cipher-page .next-projects-footer {
+.brief-cipher-page .next-projects-footer,
+.other-projects-page .next-projects-footer {
   --color-text: #ebe9e4;
   --color-accent: #e06c4c;
   color: var(--color-text);
@@ -97,7 +106,8 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
   letter-spacing: -0.045em;
   font-weight: 600;
 }
-.brief-cipher-page .external-link-btn {
+.brief-cipher-page .external-link-btn,
+.other-projects-page .external-link-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -111,12 +121,15 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
   border-bottom: 1px solid var(--bc-ink);
   transition: color 0.3s ease, border-color 0.3s ease;
 }
-.brief-cipher-page .external-link-btn:hover {
+.brief-cipher-page .external-link-btn:hover,
+.other-projects-page .external-link-btn:hover {
   color: #e06c4c;
   border-bottom-color: #e06c4c;
 }
-.brief-cipher-page .external-link-btn:focus-visible { outline-offset: 4px; }
-.brief-cipher-page .external-link-btn .arrow {
+.brief-cipher-page .external-link-btn:focus-visible,
+.other-projects-page .external-link-btn:focus-visible { outline-offset: 4px; }
+.brief-cipher-page .external-link-btn .arrow,
+.other-projects-page .external-link-btn .arrow {
   display: inline-block;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-variant-emoji: text;
@@ -125,7 +138,8 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
   line-height: 1;
   transition: transform 0.3s ease;
 }
-.brief-cipher-page .external-link-btn:hover .arrow {
+.brief-cipher-page .external-link-btn:hover .arrow,
+.other-projects-page .external-link-btn:hover .arrow {
   transform: translate(4px, -4px);
 }
 .bc-hero__details {
@@ -431,9 +445,253 @@ html[style*="color-scheme: light"] .brief-cipher-page .signature-img { filter: n
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .brief-cipher-page *, .brief-cipher-page *::before, .brief-cipher-page *::after {
+  .brief-cipher-page *, .brief-cipher-page *::before, .brief-cipher-page *::after,
+  .other-projects-page *, .other-projects-page *::before, .other-projects-page *::after {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* Project Information Dropdown / Drawer */
+.project-info-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--bc-ink);
+  padding: 0 0 0.25rem 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--bc-ink);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.project-info-btn:hover {
+  color: #e06c4c;
+  border-bottom-color: #e06c4c;
+}
+.project-info-btn:focus-visible {
+  outline: 2px solid var(--bc-ink);
+  outline-offset: 4px;
+}
+.project-info-btn .info-arrow {
+  display: inline-block;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-variant-emoji: text;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.project-info-btn[aria-expanded="true"] .info-arrow {
+  transform: rotate(180deg);
+}
+
+.project-info-drawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.35s ease;
+  opacity: 0;
+  margin-bottom: 0;
+}
+.project-info-drawer.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+.project-info-drawer__card {
+  min-height: 0;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--bc-ink) 4%, transparent);
+  border: 1px solid var(--bc-line);
+  border-radius: var(--bc-radius);
+  padding: 0 clamp(1.25rem, 2.5vw, 2rem);
+  transition: padding 0.35s ease;
+}
+.project-info-drawer.is-open .project-info-drawer__card {
+  padding: clamp(1.25rem, 2.5vw, 1.75rem) clamp(1.25rem, 2.5vw, 2rem);
+}
+.project-info-drawer__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--bc-line);
+}
+.project-info-drawer__tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bc-muted);
+}
+.project-info-drawer__text {
+  font-size: clamp(0.95rem, 1.35vw, 1.05rem);
+  line-height: 1.65;
+  color: var(--bc-ink);
+  max-width: 75ch;
+  margin: 0;
+}
+
+/* Instagram Showcase Section */
+.bc-section--instagram {
+  border-top: 1px solid var(--bc-line);
+  padding-block: clamp(3rem, 6vw, 5.5rem);
+}
+.instagram-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--bc-gap);
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  flex-wrap: wrap;
+}
+.instagram-banner__info {
+  max-width: 650px;
+}
+.instagram-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bc-ink) 6%, transparent);
+  border: 1px solid var(--bc-line);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--bc-ink);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.instagram-badge:hover {
+  background: color-mix(in srgb, var(--bc-ink) 12%, transparent);
+  border-color: var(--bc-ink);
+}
+.instagram-badge svg {
+  width: 14px;
+  height: 14px;
+}
+.instagram-title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+.instagram-subtitle {
+  color: var(--bc-muted);
+  font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+  line-height: 1.55;
+  margin: 0;
+}
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+}
+.instagram-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--bc-ink);
+  transition: transform 0.3s ease;
+}
+.instagram-card__media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--bc-radius);
+  aspect-ratio: 1 / 1;
+  background: color-mix(in srgb, var(--bc-ink) 5%, transparent);
+}
+.instagram-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.instagram-card:hover .instagram-card__media img {
+  transform: scale(1.05);
+}
+.instagram-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.instagram-card:hover .instagram-card__overlay {
+  opacity: 1;
+}
+.instagram-card__overlay-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  transform: translateY(6px);
+  transition: transform 0.3s ease;
+}
+.instagram-card__overlay-badge svg {
+  width: 14px;
+  height: 14px;
+}
+.instagram-card:hover .instagram-card__overlay-badge {
+  transform: translateY(0);
+}
+.instagram-card__caption {
+  margin-top: var(--bc-caption-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.instagram-card__tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--bc-muted);
+}
+.instagram-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--bc-ink);
+  transition: color 0.25s ease;
+}
+.instagram-card:hover .instagram-card__title {
+  color: #e06c4c;
+}
+
+@media (max-width: 900px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .instagram-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .instagram-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
