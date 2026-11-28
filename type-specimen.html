@@ -23,66 +23,55 @@
   <meta name="twitter:title" content="Type Specimen - Ryan Menzildjian">
   <meta name="twitter:description" content="Identity Designer & Brand Strategist based in New York.">
 </head>
-<body class="light-mode">
+<body class="light-mode project-page">
   <header class="site-header">
     <div class="header-inner">
-      <nav class="social-nav">
-        <a href="https://www.linkedin.com/in/ryanmenzildjian/" target="_blank" aria-label="LinkedIn">
+      <nav class="social-nav" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/ryanmenzildjian/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
-        <a href="https://www.instagram.com/ryan.menzi/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/ryan.menzi/" target="_blank" rel="noreferrer" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
         <a href="mailto:ryanmenzildjian@gmail.com" aria-label="Email">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
         </a>
       </nav>
-      <a href="/" class="logo" aria-label="Ryan Menzildjian">
-        <img src="assets/signature.png" alt="Ryan Menzildjian" class="signature-img">
-      </a>
-      <nav class="main-nav">
-        <a href="index.html#work">work</a>
-        <a href="index.html#about">about</a>
-        <a href="assets/resume.pdf" target="_blank">resume</a>
-        <button id="invert-toggle" class="invert-btn" aria-label="Invert Colors">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20V4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z"/></svg>
-        </button>
+      <a href="index.html" class="logo" aria-label="Ryan Menzildjian home"><img src="assets/signature.png" alt="Ryan Menzildjian" class="signature-img"></a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html#work">work</a><a href="index.html#about">about</a><a href="assets/resume.pdf" target="_blank">resume</a>
+        <button id="invert-toggle" class="invert-btn" aria-label="Invert colors"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20V4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20Z"/></svg></button>
       </nav>
     </div>
   </header>
 
   <main class="case-study-main">
-    <section class="cs-hero section-container">
-      <div class="cs-hero-grid">
-        <div class="cs-title-col">
-          <p class="cs-kicker">Project</p>
-          <h1 class="cs-title">Type Specimen</h1>
-          <p class="cs-subtitle"></p>
+    <section class="bc-hero bc-shell" aria-labelledby="project-title">
+      <div class="bc-hero__header">
+        <div>
+          <p class="bc-label">Project</p>
+          <h1 id="project-title">Type Specimen</h1>
         </div>
-        <div class="cs-meta-col">
-          <div class="cs-meta-grid">
-            <div class="cs-meta-item">
-              <span class="cs-meta-label">Client</span>
-              <span class="cs-meta-value">BA Studio Project</span>
+        <div class="bc-hero__details">
+          <dl class="bc-hero__facts">
+            <div><dt>Client</dt><dd>BA Studio Project</dd></div>
+            <div>
+              <dt>Services</dt>
+              <dd><ul role="list">
+                <li>Digital</li>
+                <li>Typography System</li>
+                <li>Editorial Composition</li>
+              </ul></dd>
             </div>
-            <div class="cs-meta-item">
-              <span class="cs-meta-label">Year</span>
-              <span class="cs-meta-value">2025</span>
-            </div>
-            <div class="cs-meta-item">
-              <span class="cs-meta-label">Services</span>
-              <span class="cs-meta-value"><ul>
-                                <li>Digital</li>
-                                <li>Typography System</li>
-                                <li>Editorial Composition</li>
-                            </ul></span>
-            </div>
+          </dl>
+          <div class="bc-hero__facts">
+            <dl><div><dt>Year</dt><dd>2025</dd></div></dl>
           </div>
         </div>
       </div>
-      <div class="cs-info">
+      <p class="cs-info">
         The goal was to show personality without losing readability. I used contrast, rhythm, and grid structure to keep expressive display moments in balance with clean body text so the work can function as both campaign graphics and a polished publication spread.
-      </div>
+      </p>
     </section>
 
     <section class="cs-gallery section-container">

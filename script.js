@@ -161,20 +161,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const skills = ["Identity Designer", "UI/UX Designer", "Storyteller", "Problem Solver", "Graphic Designer"];
         let currentIndex = 0;
         
-        // Initial width setup
-        const initWidth = () => {
-            if (skillCurrent.offsetWidth > 0) {
-                skillWrapper.style.width = skillCurrent.offsetWidth + 'px';
+        // Initial width setup (use ceil + resize sync so Nohemi metrics never clip)
+        const syncWidth = () => {
+            const w = Math.ceil(skillCurrent.getBoundingClientRect().width);
+            if (w > 0) {
+                skillWrapper.style.width = (w + 2) + 'px';
             }
         };
-        initWidth();
+        syncWidth();
         
-        // Also update if fonts change the size later
         if (document.fonts) {
-            document.fonts.ready.then(initWidth);
+            document.fonts.ready.then(syncWidth);
         }
-        // Fallback for immediate render
-        requestAnimationFrame(initWidth);
+        requestAnimationFrame(syncWidth);
+        window.addEventListener('resize', syncWidth);
         
         // Wait for the hook text to fade out before starting
         setTimeout(() => {
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 skillCurrent.style.opacity = '0';
                 
                 // Update wrapper width so the rest of the sentence slides over smoothly!
-                skillWrapper.style.width = skillCurrent.offsetWidth + 'px';
+                syncWidth();
                 
                 // Trigger reflow then animate IN
                 requestAnimationFrame(() => {
